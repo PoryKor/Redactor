@@ -63,8 +63,7 @@ const uploadImage = (file: File) => {
                 width: 300,
                 height: 200,
                 alignment: "left", // or "center", "right"
-                type: "image",
-                text: "" // or "video"
+                type: "image" // or "video"
             }
         })
     })
@@ -77,7 +76,6 @@ const UploadImagePopover: FunctionComponent<IUploadImagePopoverProps> = (props) 
         isCancelled: false
     })
     const [data, setData] = useState<TUploadImageData>({})
-    const [text, setText] = useState('')
 
     useEffect(() => {
         setState({
@@ -133,22 +131,6 @@ const UploadImagePopover: FunctionComponent<IUploadImagePopoverProps> = (props) 
                         </IconButton>
                     </label>
                 </Grid>
-                <Grid>
-                <input
-                        accept="image/*"
-                        value ={text}
-                        className={classes.input}
-                        id="contained-button-file"
-                        type="text"
-                        onChange={(event) => {
-                            setText(event.target.value)
-                            setData({
-                                ...data,
-                                text: text
-                            })
-                        }}
-                    />
-                </Grid>
                 <Grid item container xs={12} justify="flex-end">
                     <Button onClick={() => {
                         setState({
@@ -177,7 +159,6 @@ const UploadImagePopover: FunctionComponent<IUploadImagePopoverProps> = (props) 
 const AsyncImageUpload: FunctionComponent = () => {
     const ref = useRef<TMUIRichTextEditorRef>(null)
     const [anchor, setAnchor] = useState<HTMLElement | null>(null)
-    const [text, setText] = useState(null)
 
     const handleFileUpload = (file: File) => {
         ref.current?.insertAtomicBlockAsync("IMAGE", uploadImage(file), "Uploading now...")
