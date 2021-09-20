@@ -15,9 +15,9 @@
     "url": "https://github.com/PoryKor/Redactor/mui-rte.git"
   },
   "bugs": {
-    "url": "https://github.com/niuware/mui-rte/issues"
+    "url": "https://github.com/PoryKor/Redactor/issues"
   },
-  "homepage": "https://github.com/niuware/mui-rte#readme",
+  "homepage": "https://github.com/PoryKor/Redactor/mui-rte#readme",
   "main": "dist/index.js",
   "scripts": {
     "serve": "cross-env webpack-dev-server --mode development",
