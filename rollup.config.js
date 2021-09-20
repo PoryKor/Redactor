@@ -16,6 +16,6 @@ export default {
         file: 'dist/index.js',
         format: 'cjs',
         exports: 'named',
-        sourcemap: process.env.NODE_ENV === "development"
+        sourcemap: process.env.NODE_ENV === "production"
     }
 };
