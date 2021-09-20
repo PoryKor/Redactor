@@ -3,7 +3,7 @@ const webpack = require("webpack");
 
 module.exports = {
     name: "mui-rte-example",
-    mode: "development",
+    mode: "production",
     node: {
         __dirname: false,
         __filename: false
