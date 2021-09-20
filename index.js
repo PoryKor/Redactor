@@ -1,1 +1,1 @@
-export {default} from './dist'
+export {default} from './node_modules/immutable/dist'
