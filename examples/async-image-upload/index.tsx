@@ -77,6 +77,7 @@ const UploadImagePopover: FunctionComponent<IUploadImagePopoverProps> = (props) 
     })
     const [data, setData] = useState<TUploadImageData>({})
 
+
     useEffect(() => {
         setState({
             anchor: props.anchor,

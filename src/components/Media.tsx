@@ -36,7 +36,7 @@ const styles = ({ shadows }: Theme) => createStyles({
 })
 
 const Media: FunctionComponent<IMediaProps> = (props) => {
-    const { url, width, height, alignment, type } = props.contentState.getEntity(props.block.getEntityAt(0)).getData()
+    const { url, width, height, alignment, type, text } = props.contentState.getEntity(props.block.getEntityAt(0)).getData()
     const { onClick, readOnly, focusKey } = props.blockProps
 
     const htmlTag = () => {
@@ -57,7 +57,7 @@ const Media: FunctionComponent<IMediaProps> = (props) => {
         }
 
         if (!type || type === "image") {
-            return <div className='article-media m-mini'><figure className='image article-media__art'><img {...componentProps} /></figure><figcaption className='article-media__text'><span className='article-media__about'></span></figcaption></div>
+            return <div className='article-media m-mini'><figure className='image article-media__art'><img {...componentProps} /></figure><figcaption className='article-media__text'><span className='article-media__about'>{text}</span></figcaption></div>
            
         }
         if (type === "video") {
