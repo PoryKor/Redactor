@@ -57,7 +57,8 @@ const Media: FunctionComponent<IMediaProps> = (props) => {
         }
 
         if (!type || type === "image") {
-            return <img {...componentProps} />
+            return <div className='article-media m-mini'><figure className='image article-media__art'><img {...componentProps} /></figure><figcaption className='article-media__text'><span className='article-media__about'></span></figcaption></div>
+           
         }
         if (type === "video") {
             return <video {...componentProps} autoPlay={false} controls />
